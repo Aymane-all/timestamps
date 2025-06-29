@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.get('/api/:date?', (req, res) => {
+app.get('/api/:date', (req, res) => {
     let dateParam = req.params.date;
     let date;
     
