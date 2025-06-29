@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
-app.get('/api/:date?', (req, res) => {
+app.get('/api/:date', (req, res) => {
     let dateParam = req.params.date;
     let date;
 
