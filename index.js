@@ -16,13 +16,11 @@ app.get('/api/:date?', (req, res) => {
     let date;
 
     if (!dateParam) {
-        date = new Date(); // cas où aucun paramètre n'est donné
+        date = new Date(); 
     } else {
-        // Si le paramètre est numérique (timestamp)
         if (!isNaN(Number(dateParam))) {
             date = new Date(Number(dateParam));
         } else {
-            // Sinon, on le traite comme une date classique
             date = new Date(dateParam);
         }
     }
